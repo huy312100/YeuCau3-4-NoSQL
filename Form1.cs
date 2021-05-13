@@ -86,6 +86,7 @@ namespace Search_NoSQL
 
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
         {
+            searchTextBox.Clear();
             MongoClient dbClient = new MongoClient("mongodb://localhost");
 
             var database = dbClient.GetDatabase("Tiki");
