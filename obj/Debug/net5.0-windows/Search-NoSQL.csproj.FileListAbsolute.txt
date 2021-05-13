@@ -17,6 +17,7 @@ D:\Search-NoSQL\bin\Debug\net5.0-windows\runtimes\win\native\snappy64.dll
 D:\Search-NoSQL\bin\Debug\net5.0-windows\runtimes\linux\native\libmongocrypt.so
 D:\Search-NoSQL\bin\Debug\net5.0-windows\runtimes\osx\native\libmongocrypt.dylib
 D:\Search-NoSQL\bin\Debug\net5.0-windows\runtimes\win\native\mongocrypt.dll
+D:\Search-NoSQL\obj\Debug\net5.0-windows\Search-NoSQL.csprojAssemblyReference.cache
 D:\Search-NoSQL\obj\Debug\net5.0-windows\Search_NoSQL.Form1.resources
 D:\Search-NoSQL\obj\Debug\net5.0-windows\Search-NoSQL.csproj.GenerateResource.cache
 D:\Search-NoSQL\obj\Debug\net5.0-windows\Search-NoSQL.GeneratedMSBuildEditorConfig.editorconfig
@@ -28,4 +29,4 @@ D:\Search-NoSQL\obj\Debug\net5.0-windows\Search-NoSQL.dll
 D:\Search-NoSQL\obj\Debug\net5.0-windows\ref\Search-NoSQL.dll
 D:\Search-NoSQL\obj\Debug\net5.0-windows\Search-NoSQL.pdb
 D:\Search-NoSQL\obj\Debug\net5.0-windows\Search-NoSQL.genruntimeconfig.cache
-D:\Search-NoSQL\obj\Debug\net5.0-windows\Search-NoSQL.csprojAssemblyReference.cache
+D:\Search-NoSQL\obj\Debug\net5.0-windows\Search_NoSQL.Properties.Resources.resources

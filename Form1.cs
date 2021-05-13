@@ -33,6 +33,7 @@ namespace Search_NoSQL
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
+            
             Console.WriteLine("a");
             MongoClient dbClient = new MongoClient("mongodb://localhost");
 
@@ -95,27 +96,38 @@ namespace Search_NoSQL
             List<Product> Product = new List<Product>();
 
             //var data = collection.Find(Builders<BsonDocument>.Filter.Text("Iphone")).ForEachAsync(x => System.Diagnostics.Debug.WriteLine(x));
-
-            var data = collection.Find(Builders<BsonDocument>.Filter.Eq("type",comboBox1.SelectedItem.ToString())).ToList();
-            if (data.Count != 0)
+            if (comboBox1.SelectedItem != null)
             {
-                dataGridViewTxtSearch.Visible = true;
-                foreach (var item in data)
+                var data = collection.Find(Builders<BsonDocument>.Filter.Eq("type", comboBox1.SelectedItem.ToString())).ToList();
+
+                if (data.Count != 0)
                 {
-                    Product dataProduct = new Product();
-                    //dataProduct.ID = item[0].AsObjectId;
-                    dataProduct.name = item[1].ToString();
-                    dataProduct.price = item[2].ToInt32();
-                    dataProduct.type = item[3].ToString();
-                    dataProduct.decription = item[4].ToString();
-                    Product.Add(dataProduct);
+                    dataGridViewTxtSearch.Visible = true;
+                    foreach (var item in data)
+                    {
+                        Product dataProduct = new Product();
+                        //dataProduct.ID = item[0].AsObjectId;
+                        dataProduct.name = item[1].ToString();
+                        dataProduct.price = item[2].ToInt32();
+                        dataProduct.type = item[3].ToString();
+                        dataProduct.decription = item[4].ToString();
+                        Product.Add(dataProduct);
+                    }
+                    dataGridViewTxtSearch.DataSource = Product;
                 }
-                dataGridViewTxtSearch.DataSource = Product;
+                else
+                {
+                    MessageBox.Show("Không thấy kết qủa tìm kiếm");
+                }
             }
             else
             {
-                MessageBox.Show("Không thấy kết qủa tìm kiếm");
+                return;
             }
         }
+
+ 
+
+
     }
 }
